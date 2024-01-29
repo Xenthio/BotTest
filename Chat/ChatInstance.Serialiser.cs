@@ -7,7 +7,8 @@ public partial class ChatInstance
 	{
 		var prompt = SerialiseIntoPrompt(persona);
 
-		API.Generate(prompt, )
+		var result = API.Generate(prompt, Parameters);
+		return result.Result;
 	}
 
 	public string SerialiseIntoPrompt(ChatPersona persona)
